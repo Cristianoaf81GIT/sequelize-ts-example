@@ -1,0 +1,26 @@
+{
+  "name": "sequelize-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "create:migration": "ts-node ./node_modules/.bin/sequelize-cli migration:create --name $fname",
+    "migration:down": "ts-node ./node_modules/.bin/sequelize-cli db:migrate:undo --name $fname",
+    "migration:up": "ts-node ./node_modules/.bin/sequelize-cli db:migrate --name $fname",
+    "migration:all-up": "ts-node ./node_modules/.bin/sequelize-cli db:migrate",
+    "migration:all-down": "ts-node ./node_modules/.bin/sequelize-cli db:migrate:undo:all",
+    "start:demo-app": "ts-node ./index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.1.2",
+    "sequelize-cli": "^6.6.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "sequelize": "^6.31.1",
+    "sqlite3": "^5.1.6"
+  }
+}
