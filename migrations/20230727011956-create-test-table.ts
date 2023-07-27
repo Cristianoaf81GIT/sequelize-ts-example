@@ -40,6 +40,7 @@ export async function up(queryInterface: QueryInterface): Promise<void> {
     await queryInterface.addIndex('test',['name']);
   } catch (error) {
     console.error(JSON.stringify(error, null, 4));
+    throw error;
   }
 }
 
@@ -48,5 +49,6 @@ export async function down(queryInterface: QueryInterface): Promise<void> {
     await queryInterface.dropTable('test');
   } catch (error) {
     console.error(JSON.stringify(error, null, 4));
+    throw error;
   }
 }
